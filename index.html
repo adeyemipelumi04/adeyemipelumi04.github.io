@@ -6,143 +6,157 @@
   <title>Adeyemi Favour Oluwapelumi | Flutter Developer</title>
   <style>
     :root {
-      --primary-color: #5e60ce;
-      --secondary-color: #7400b8;
-      --background-color: #f9f9fb;
-      --card-bg: #fff;
-      --text-color: #222;
-      --muted-color: #777;
-      --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      --radius: 12px;
+      --primary: #007acc;
+      --light-bg: #f2f2f2;
+      --dark-bg: #121212;
+      --light-color: #333;
+      --dark-color: #e0e0e0;
     }
 
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.7;
-      padding: 0 1rem;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: var(--light-bg);
+      color: var(--light-color);
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    body.dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--dark-color);
     }
 
     header {
-      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      background-color: var(--primary);
       color: white;
+      padding: 20px;
       text-align: center;
-      padding: 3rem 1rem;
+      transition: background-color 0.4s;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease-in-out;
     }
 
-    header p {
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
+    .profile-img:hover {
+      transform: scale(1.05);
     }
 
     section {
-      background: var(--card-bg);
-      margin: 2rem auto;
-      padding: 2rem;
-      max-width: 900px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.4s, box-shadow 0.4s;
+    }
+
+    body.dark-mode section {
+      background-color: #1e1e1e;
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
     }
 
     h2 {
-      color: var(--primary-color);
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid var(--secondary-color);
-      padding-left: 0.5rem;
-    }
-
-    h3 {
-      margin-top: 1.5rem;
-      color: #444;
-    }
-
-    ul {
-      padding-left: 1.2rem;
+      color: var(--primary);
     }
 
     a {
-      color: var(--primary-color);
+      color: var(--primary);
       text-decoration: none;
+      transition: color 0.3s;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    .link-list li {
-      margin-bottom: 0.4rem;
-    }
-
-    .tech-stack p {
-      margin: 0.3rem 0;
-    }
-
     footer {
       text-align: center;
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      margin: 3rem 0 2rem;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 999;
+      transition: background-color 0.3s;
+    }
+
+    .toggle-theme:hover {
+      background-color: #005fa3;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
+      section, header {
+        padding: 15px;
       }
-
-      section {
-        padding: 1.2rem;
+      .profile-img {
+        width: 100px;
+        height: 100px;
       }
     }
   </style>
 </head>
 <body>
+  <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+
   <header>
+    <img src="https://drive.google.com/uc?export=view&id=1OFE3r0seawfNxTKjNeZpKZh7YzjxB00x" alt="Adeyemi Favour Oluwapelumi" class="profile-img" />
     <h1>👋 Hi, I'm Adeyemi Favour Oluwapelumi</h1>
-    <p>Flutter Developer • Mobile App Engineer • UI Enthusiast • IT Support Specialist</p>
+    <p>Flutter Developer | Mobile App Engineer | UI Enthusiast | IT Support Specialist</p>
   </header>
 
   <section>
     <h2>🚀 Featured Projects</h2>
-
     <h3>📱 Flutter eCommerce App</h3>
-    <ul class="link-list">
-      <li>Modern shopping experience with cart, login, and theming</li>
+    <ul>
+      <li>Modern shopping experience with cart, login, theming</li>
       <li><strong>Tech:</strong> Flutter, Firebase Auth</li>
-      <li><a href="https://github.com/adeyemipelumi04/stylish_ecommerce_app" target="_blank">Stylish eCommerce App</a></li>
-      <li><a href="https://github.com/adeyemipelumi04/nectar-project" target="_blank">Nectar Project</a></li>
+      <li><a href="#">https://github.com/adeyemipelumi04/stylish_ecommerce_app</a></li>
+      <li><a href="#">https://github.com/adeyemipelumi04/nectar-project</a></li>
     </ul>
 
     <h3>🧘 Habit Tracker App</h3>
-    <ul class="link-list">
+    <ul>
       <li>Tracks habits with streaks and notifications</li>
       <li><strong>Tech:</strong> Flutter, Riverpod, SharedPreferences</li>
-      <li><a href="https://github.com/Algobuds/prohabit-mobile" target="_blank">ProHabit Mobile</a></li>
+      <li><a href="#">https://github.com/Algobuds/prohabit-mobile</a></li>
     </ul>
 
     <h3>💬 Chat App</h3>
-    <ul class="link-list">
-      <li>A real-time chat app powered by Firebase backend</li>
+    <ul>
+      <li>A chat app using Firebase as the backend</li>
       <li><strong>Tech:</strong> Flutter, Firebase, Firebase Auth</li>
-      <li><a href="https://github.com/adeyemipelumi04/chatbox" target="_blank">Chatbox</a></li>
+      <li><a href="#">https://github.com/adeyemipelumi04/chatbox</a></li>
     </ul>
 
     <h3>🔐 Login/Auth App</h3>
-    <ul class="link-list">
+    <ul>
       <li>Hive-based credential storage with Cubit/BLoC</li>
       <li><strong>Tech:</strong> Flutter, Hive, SharedPreferences</li>
-      <li><a href="https://github.com/adeyemipelumi04/login_bloc" target="_blank">Login BLoC App</a></li>
+      <li><a href="#">https://github.com/adeyemipelumi04/login_bloc</a></li>
     </ul>
   </section>
 
-  <section class="tech-stack">
+  <section>
     <h2>🛠️ Tech Stack</h2>
     <p><strong>Frameworks:</strong> Flutter, Dart</p>
     <p><strong>Storage:</strong> Hive, SQFLite, SharedPreferences</p>
@@ -153,11 +167,17 @@
   <section>
     <h2>📬 Contact Me</h2>
     <p>Email: <a href="mailto:adeyemipelumi202@gmail.com">adeyemipelumi202@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/adeyemipelumi04" target="_blank">github.com/adeyemipelumi04</a></p>
+    <p>GitHub: <a href="https://github.com/adeyemipelumi04">github.com/adeyemipelumi04</a></p>
   </section>
 
   <footer>
-    <p>“Software doesn’t just solve problems — it transforms how we live.”</p>
+    <p>“Softwares don't just solve problems — they transform the way we live.”</p>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
