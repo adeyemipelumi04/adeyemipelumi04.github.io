@@ -5,81 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adeyemi Favour Oluwapelumi | Flutter Developer</title>
   <style>
+    :root {
+      --primary-color: #5e60ce;
+      --secondary-color: #7400b8;
+      --background-color: #f9f9fb;
+      --card-bg: #fff;
+      --text-color: #222;
+      --muted-color: #777;
+      --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
-      line-height: 1.6;
-      background-color: #f2f2f2;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      padding: 0 1rem;
     }
+
     header {
-      background-color: #007acc;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 3rem 1rem;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
     section {
-      margin-bottom: 30px;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background: var(--card-bg);
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 900px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
+
     h2 {
-      color: #007acc;
+      color: var(--primary-color);
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--secondary-color);
+      padding-left: 0.5rem;
     }
+
+    h3 {
+      margin-top: 1.5rem;
+      color: #444;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
     a {
-      color: #007acc;
+      color: var(--primary-color);
       text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .link-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    .tech-stack p {
+      margin: 0.3rem 0;
+    }
+
     footer {
       text-align: center;
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #888;
+      font-size: 0.9rem;
+      color: var(--muted-color);
+      margin: 3rem 0 2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      section {
+        padding: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>👋 Hi, I'm Adeyemi Favour Oluwapelumi</h1>
-    <p>Flutter Developer | Mobile App Engineer | UI Enthusiast | IT Support Specialist</p>
+    <p>Flutter Developer • Mobile App Engineer • UI Enthusiast • IT Support Specialist</p>
   </header>
 
   <section>
     <h2>🚀 Featured Projects</h2>
+
     <h3>📱 Flutter eCommerce App</h3>
-    <ul>
-      <li>Modern shopping experience with cart, login, theming</li>
+    <ul class="link-list">
+      <li>Modern shopping experience with cart, login, and theming</li>
       <li><strong>Tech:</strong> Flutter, Firebase Auth</li>
-      <li><a href="#">https://github.com/adeyemipelumi04/stylish_ecommerce_app</a></li>
-       <li><a href="#">https://github.com/adeyemipelumi04/nectar-project</a></li>
+      <li><a href="https://github.com/adeyemipelumi04/stylish_ecommerce_app" target="_blank">Stylish eCommerce App</a></li>
+      <li><a href="https://github.com/adeyemipelumi04/nectar-project" target="_blank">Nectar Project</a></li>
     </ul>
 
     <h3>🧘 Habit Tracker App</h3>
-    <ul>
+    <ul class="link-list">
       <li>Tracks habits with streaks and notifications</li>
       <li><strong>Tech:</strong> Flutter, Riverpod, SharedPreferences</li>
-      <li><a href="#">https://github.com/Algobuds/prohabit-mobile</a></li>
+      <li><a href="https://github.com/Algobuds/prohabit-mobile" target="_blank">ProHabit Mobile</a></li>
     </ul>
 
-     <h3>💬Chat App</h3>
-    <ul>
-      <li>A chat app using Firebase as the backend</li>
+    <h3>💬 Chat App</h3>
+    <ul class="link-list">
+      <li>A real-time chat app powered by Firebase backend</li>
       <li><strong>Tech:</strong> Flutter, Firebase, Firebase Auth</li>
-      <li><a href="#">https://github.com/adeyemipelumi04/chatbox</a></li>
+      <li><a href="https://github.com/adeyemipelumi04/chatbox" target="_blank">Chatbox</a></li>
     </ul>
-    
+
     <h3>🔐 Login/Auth App</h3>
-    <ul>
+    <ul class="link-list">
       <li>Hive-based credential storage with Cubit/BLoC</li>
       <li><strong>Tech:</strong> Flutter, Hive, SharedPreferences</li>
-      <li><a href="#">https://github.com/adeyemipelumi04/login_bloc</a></li>
+      <li><a href="https://github.com/adeyemipelumi04/login_bloc" target="_blank">Login BLoC App</a></li>
     </ul>
   </section>
 
-  <section>
+  <section class="tech-stack">
     <h2>🛠️ Tech Stack</h2>
     <p><strong>Frameworks:</strong> Flutter, Dart</p>
     <p><strong>Storage:</strong> Hive, SQFLite, SharedPreferences</p>
@@ -90,12 +153,11 @@
   <section>
     <h2>📬 Contact Me</h2>
     <p>Email: <a href="mailto:adeyemipelumi202@gmail.com">adeyemipelumi202@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/adeyemipelumi04">github.com/adeyemipelumi04</a></p>
-   
+    <p>GitHub: <a href="https://github.com/adeyemipelumi04" target="_blank">github.com/adeyemipelumi04</a></p>
   </section>
 
   <footer>
-    <p>“softwares doesn't just solves problem — they transform the way we live.”</p>
+    <p>“Software doesn’t just solve problems — it transforms how we live.”</p>
   </footer>
 </body>
 </html>
